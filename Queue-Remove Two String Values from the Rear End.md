@@ -22,7 +22,17 @@ To write a Python program to:
 
 ##  Program:
 Add Code Here
-
+from collections import deque
+q=deque()
+n=int(input())
+for i in range(n):
+    q.append(input())
+for i in range(2):
+    q.popleft()
+print(q)
+)
 ### Output:
+<img width="1187" height="399" alt="image" src="https://github.com/user-attachments/assets/a51e898d-518c-4192-97dc-81f54400be82" />
 
 ## Result:
+Thus the program is verified.
