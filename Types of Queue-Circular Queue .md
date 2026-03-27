@@ -1,34 +1,53 @@
-# 🔄 Types of Queue-Circular Queue in Python
+# # Stack-Stack Reversal Program 🔁
 
-This project demonstrates the implementation of a **Circular Queue** in Python. The queue accepts 3 user values, performs enqueue and dequeue operations, and displays the removed values.
-
----
+This Python program demonstrates how to reverse the values in a stack using basic stack operations like push and pop.
 
 ## 🎯 Aim
 
-To develop a Python program that implements a Circular Queue:
-- Accepts 3 values from the user
-- Removes the 3 values from the queue
-- Displays the removed values
+To write a Python program that reverses the values in a stack using standard stack operations.
 
----
+## 📋 Algorithm
 
-## 🧠 Algorithm
+1. Create an empty stack.
+2. Read an integer `n` from the user (number of elements to push).
+3. Loop `n` times:
+   - Read an integer from the user.
+   - Push it onto the stack.
+4. Create an empty list called `reverse`.
+5. While the stack is not empty:
+   - Pop the top element.
+   - Append it to `reverse`.
+6. Print the reversed list.
 
-1. **Initialize** a circular queue of fixed size (e.g., 5).
-2. **Define the following functions**:
-   - `enqueue()`: Inserts an element into the queue.
-   - `dequeue()`: Removes an element from the queue.
-   - `display()`: Shows the queue contents.
-3. Accept 3 values from the user using the `enqueue()` method.
-4. Remove 3 values using the `dequeue()` method.
-5. Print the removed values.
 
----
-
-## 💻 Program:
+### Program:
 Add Code Here
+def insertAtBottom(s, item):
+    if not s:
+        s.append(item)
+        return
+    top = s.pop()
+    insertAtBottom(s, item)
+    s.append(top)
 
-### Output:
+def reverseStack(s):
+ 
+    if not s:
+        return
+ 
+    item = s.pop()
+    reverseStack(s)
+ 
+    insertAtBottom(s, item)
+    return s
+l=[]
+n=int(input())
+for i in range(n):
+    l.append(int(input()))
+print(reverseStack(l))
+## 🧪 Sample Input and Output
+<img width="513" height="277" alt="image" src="https://github.com/user-attachments/assets/3e36fa8c-e49d-4f8d-9a02-a1ea2c23e8c2" />
 
-## Result:
+## Result
+
+Thus,the program is executed successfully
