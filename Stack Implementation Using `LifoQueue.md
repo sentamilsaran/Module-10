@@ -23,7 +23,16 @@ To create a Python program that:
 
 ## Program
 Add Code Here
-
+from queue import LifoQueue
+stack = LifoQueue(maxsize=7)
+n= int(input())
+for i in range(n):
+    stack.put(input())
+print(stack.full())
+for i in range(n):
+    print(stack.get())
 ## 🧪 Sample Input and Output
+<img width="541" height="468" alt="image" src="https://github.com/user-attachments/assets/dec9a90b-a48c-4c3f-b3c6-832efb6a8ea1" />
 
 ## Result:
+Thus,the program is executed successfully
